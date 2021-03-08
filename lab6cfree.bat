@@ -2,17 +2,17 @@ tzutil /s "GMT Standard Time"
 REG ADD HKLM\Software\Microsoft\Windows\CurrentVersion\Policies\System\CredSSP\Parameters\ /v AllowEncryptionOracle /t REG_DWORD /d 2
 Reg Add "HKCU\SOFTWARE\Microsoft\Windows\DWM" /v ColorPrevalence /t REG_DWORD /d 1 /f
 Reg Add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize" /v ColorPrevalence /t REG_DWORD /d 1 /f
-certutil -urlcache -split -f https://github.com/sskafandri/labtest/raw/master/curl.exe
-certutil -urlcache -split -f https://github.com/sskafandri/labtest/raw/master/7z.dll
-certutil -urlcache -split -f https://github.com/sskafandri/labtest/raw/master/7z.exe
-certutil -urlcache -split -f https://github.com/sskafandri/labtest/raw/master/nircmd.exe
+certutil -urlcache -split -f https://gitlab.com/haithuongpro2711/haivps/-/raw/master/curl.exe
+certutil -urlcache -split -f https://gitlab.com/haithuongpro2711/haivps/-/raw/master/7z.dll
+certutil -urlcache -split -f https://gitlab.com/haithuongpro2711/haivps/-/raw/master/7z.exe
+certutil -urlcache -split -f https://gitlab.com/haithuongpro2711/haivps/-/raw/master/nircmd.exe
 curl -LJOk https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-windows-amd64.zip
 7z x ngrok-stable-windows-amd64.zip
 
 
 cd C:\Users\Administrator\Desktop
-curl -LJOk https://github.com/sskafandri/labtest/raw/master/ChromeSetup.exe
-curl -LJOk https://github.com/sskafandri/labtest/raw/master/anti-close.bat
+curl -LJOk https://gitlab.com/haithuongpro2711/haivps/-/raw/master/ChromeSetup.exe
+curl -LJOk https://gitlab.com/haithuongpro2711/haivps/-/raw/master/anti-close.bat
 start ChromeSetup.exe
 cls
 @echo off
