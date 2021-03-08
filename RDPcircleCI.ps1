@@ -7,5 +7,5 @@ cmd /c echo ./ngrok.exe authtoken "$NGROK" >a.ps1
 cmd /c echo cmd /k start ngrok.exe tcp 3389 >>a.ps1
 cmd /c echo ping -n 999999 10.10.10.10 >>a.ps1
 echo Your NGROK IP:
-cmd /c """tasklist | find /i "ngrok.exe" >Nul && curl -s localhost:4040/api/tunnels | jq -r .tunnels[0].public_url || echo "Can't get NGROK tunnel.Edit YML and try again" && taskkill /f /im powershell.exe"""
+cmd /c """tasklist | find /i "ngrok.exe" >Nul && curl -s localhost:4040/api/tunnels | jq -r .tunnels[0].public_url || taskkill /f /im powershell.exe"""
 .\a.ps1
