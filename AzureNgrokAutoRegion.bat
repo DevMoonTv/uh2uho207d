@@ -17,9 +17,9 @@ start NGROK.bat >nul
 echo Check Region for NGROK...
 curl -s ifconfig.me >ip.txt
 set /p IP=<ip.txt
-curl -s "http://api.whoapi.com/?apikey=2ef57b179506aa2979a2d4f4d1d5f344&r=geo&domain=&ip=%IP%" >full.txt
-type full.txt | jq -r .geo_cc >region.txt
-type full.txt | jq -r .geo_country >location.txt
+curl -s ipinfo.io/%IP%?token=52e07b22f25013 >full.txt
+type full.txt | jq -r .country >region.txt
+type full.txt | jq -r .city >location.txt
 set /p LO=<location.txt
 set /p RE=<region.txt
 if %RE%==US (start ngrok tcp 3389)
